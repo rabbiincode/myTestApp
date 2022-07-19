@@ -4,14 +4,13 @@ import SearchBox from './SearchBox';
 import ThumbNail from './ThumbNail';
 
 const Row = () => {
-    // const [thumb, setThumb] = useState([])
 
     const [search, setSearch] = useState('avengers')
     const [result, setResult] = useState([])
 
     const getData = async (search) => {
         const { data } = await
-        axios.get(`http://www.omdbapi.com/?s=${search}&apikey=b38225d7`)
+        axios.get(`https://www.omdbapi.com/?s=${search}&apikey=b38225d7`)
 
         if (data.Search) {
           setResult(data.Search)
@@ -23,16 +22,6 @@ const Row = () => {
       }, [search])
 
      console.log(result);
-
-    // const getData = async () => {
-    //     const { data } = await
-    //     axios.get('http://www.omdbapi.com/?s=inception&apikey=b38225d7')
-    //     setThumb(data.Search)
-    //   }
-    //  useEffect(() => {
-    //    getData()
-    //  }, [])
-    //  console.log(thumb);
 
   return (
     <div>

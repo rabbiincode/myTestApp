@@ -7,7 +7,7 @@ const FixedMovies = () => {
 
     const getData = async () => {
       const { data } = await
-        axios.get('http://www.omdbapi.com/?s=merlin&apikey=b38225d7')
+        axios.get('https://www.omdbapi.com/?s=merlin&apikey=b38225d7')
         setThumb(data.Search)
       }
 

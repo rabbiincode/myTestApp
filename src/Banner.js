@@ -6,7 +6,7 @@ const Banner = () => {
 
   const getData = async () => {
     const { data } = await
-    axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=b38225d7')
+    axios.get('https://www.omdbapi.com/?i=tt3896198&apikey=b38225d7')
     setMovie(data)
   }
  useEffect(() => {
