@@ -1,22 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Banner from './Banner';
+import FixedMovies from './FixedMovies';
+import Header from './Header'
+import Row from './Row';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div className="pb-4 mb-4 lg:pb-7 lg:mb-7">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Header />
+        <main>
+          <Banner />
+          <section className='space-y-10'>
+            <Row />
+            <FixedMovies />
+          </section>
+        </main>
       </header>
     </div>
   );
